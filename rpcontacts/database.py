@@ -13,11 +13,6 @@ def _createconnectiontable():
         )
         """
     )
-    
-
-
-
-
 
 def createconnection(databasename):
     connection = QSqlDatabase.addDatabase("QSQLITE")
