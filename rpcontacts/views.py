@@ -19,7 +19,7 @@ class Window (QMainWindow):
     def __init__(self, parent: None) :
         super().__init__(parent)
         self.setWindowTitle("CONTACT BOOK")
-        self.resize(550,250)
+        self.resize(870,600)
         self.centralWidget =QWidget()
         self.setCentralWidget(self.centralWidget)
         self.layout = QHBoxLayout()
