@@ -18,7 +18,7 @@ class ContactsModel:
     
     def addContact(self, data):
         rows = self.model.rowCount()
-        self.model.insertRow(rows, 1)
+        self.model.insertRows(rows, 1)
         for column, field in enumerate(data):
             self.model.setData(self.model.index(rows, column + 1), field)
         self.model.submitAll()

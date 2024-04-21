@@ -20,19 +20,19 @@ def main():
     VALUES (?, ?, ?)
     """
     )
-    # data =[
-    #     ("Linda", "Technical Lead", "linda@example.com"),
-    #     ("Joe", "Senior Web Developer", "joe@example.com"),
-    #     ("Lara", "Project Manager", "lara@example.com"),
-    #     ("David", "Data Analyst", "david@example.com"),
-    #     ("Jane", "Senior Python Developer", "jane@example.com"),
-    # ]
+    data =[
+        ("hassan", "english teacher", "hassan@example.com"),
+        ("reza", "math teacher", "reza@example.com"),
+        ("masoud", "physic teacher", "masoud@example.com"),
+        ("alireza", "art teacher", "alireza@example.com"),
+        ("karim", "Sport teacher", "karim@example.com"),
+    ]
     
-    # for name, job, email in data :
-    #     insertDataQuery.addBindValue(name)
-    #     insertDataQuery.addBindValue(job)
-    #     insertDataQuery.addBindValue(email)
-    #     insertDataQuery.exec()
+    for name, job, email in data :
+        insertDataQuery.addBindValue(name)
+        insertDataQuery.addBindValue(job)
+        insertDataQuery.addBindValue(email)
+        insertDataQuery.exec()
 
     win = Window(None)
     win.show()

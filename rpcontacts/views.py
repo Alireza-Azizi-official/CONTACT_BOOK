@@ -59,11 +59,12 @@ class Window (QMainWindow):
             return
         messageBox = QMessageBox.warning(
             self,
-            "WARNING",
-            "DO YOU WANT TO REMOVE THE SELECTED CONTACT?",
-            QMessageBox.ok | QMessageBox.Cancel,
+            "Warning!",
+            "Do you want to remove the selected contact?",
+            QMessageBox.Ok | QMessageBox.Cancel,
         )
-        if messageBox == QMessageBox.ok:
+
+        if messageBox == QMessageBox.Ok:
             self.contactsModel.deleteContact(row)
             
     def  clearContacts(self):
@@ -71,9 +72,9 @@ class Window (QMainWindow):
             self,
             "WARNING",
             "Do you want to remove all your contacts?",
-            QMessageBox.ok | QMessageBox.Cancel,
+            QMessageBox.Ok | QMessageBox.Cancel,
         )
-        if messageBox == QMessageBox.ok:
+        if messageBox == QMessageBox.Ok:
             self.contactsModel.clearContacts()
             
             
@@ -101,12 +102,12 @@ class AddDialog(QDialog):
         self.layout.addLayout(layout)
         
         self.buttonBox = QDialogButtonBox(self)
-        self.buttonsBox.setOrientation(Qt.Horizontal)
-        self.buttonsBox.setStandardButtons(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        self.buttonBox.setOrientation(Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
         
-        self.buttonsBox.accepted.connect(self.accept)
-        self.buttonsBox.rejected.connect(self.reject)
-        self.layout.addWidget(self.buttonsBox)
+        self.buttonBox.accepted.connect(self.accept)
+        self.buttonBox.rejected.connect(self.reject)
+        self.layout.addWidget(self.buttonBox)
         
     def accept(self):
         self.data = []
