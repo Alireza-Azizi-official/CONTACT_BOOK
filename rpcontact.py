@@ -1,4 +1,4 @@
 from rpcontacts.main import main
 
-if __name__ == "__mian__":
+if __name__ == "__main__":
     main()
